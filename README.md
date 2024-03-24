@@ -10,7 +10,7 @@
     <img alt="Folk" title="Fork Button" src="https://shields.io/badge/-DAR%20FORK-red.svg?&style=for-the-badge&logo=github&logoColor=white"/></a>
 
 
-## Detalhes do Projeto [PT]
+### Detalhes do Projeto [PT]
 
 A Fórmula 1, é a principal categoria do automobilismo internacional, reconhecida pela Federação Internacional de Automobilismo (FIA).
 
@@ -21,7 +21,7 @@ Para isso, criaremos uma pipeline de ETL completa em um projeto End-to-end de en
 Durante esse projeto aprofundaremos no conceito de Delta Lake, e utilizaremos a máxima potência dos motores do Apache Spark! Então aperte seu cinto!
 Seja muito bem vindo(a) a esta jornada!
 
-## Project Details [EN]
+### Project Details [EN]
 
 Formula 1 is the premier class of international motorsport, recognized by the International Automobile Federation (FIA).
 
@@ -38,7 +38,7 @@ Welcome to this journey!
 ### Repositório destinado à estudos e documentação do projeto de formação. 
 
 
-<div align="center">
+<div align="left">
   <p>
       <img src="https://img.shields.io/github/languages/count/alexklenio/DIO-dotnet-developer"/>
       <img src="https://img.shields.io/github/repo-size/alexklenio/DIO-dotnet-developer"/>
