@@ -1,37 +1,41 @@
-<img align="right" src="https://raw.githubusercontent.com/araujoeverton/XP_Bootcamp_Engenharia_de_Dados/main/assets/bootcamp-engenheiro-de-dados-xp.jpg" width="1080"/> ...
+<img align="right" src="https://raw.githubusercontent.com/araujoeverton/Formula-1-Databricks-Modern-Stack/main/assets/formula-1.jpg" width="1080"/> ...
 
 
 
-<img align="right" src="https://raw.githubusercontent.com/araujoeverton/XP_Bootcamp_Engenharia_de_Dados/main/assets/Apache_kafka_wordtype.svg" width="200"/>
+<img align="right" src="https://raw.githubusercontent.com/araujoeverton/Formula-1-Databricks-Modern-Stack/27bb0d7374cf35d5612368f84d9a35cc1a2cfff3/assets/databricks-vector-logo-2022%20(2).svg" width="200"/>
 
 # Autorização de Uso
 ### 1. Salve uma cópia e utilize o material deste repositório para estudo!
-<a href="https://github.com//araujoeverton/XP_Bootcamp_Engenharia_de_Dados//fork">
+<a href="https://github.com//araujoeverton/Formula-1-Databricks-Modern-Stack/fork">
     <img alt="Folk" title="Fork Button" src="https://shields.io/badge/-DAR%20FORK-red.svg?&style=for-the-badge&logo=github&logoColor=white"/></a>
 
 
-## Detalhes da formação
+## Detalhes do Projeto [PT]
 
-A XP Investimentos investe em formação e conhecimento! Um dos bancos líderes de mercado e em inovação preparou o Bootcamp Engenheiro de Dados!
+A Fórmula 1, é a principal categoria do automobilismo internacional, reconhecida pela Federação Internacional de Automobilismo (FIA).
 
-O objetivo é simples: Formar profissionais capazes de trabalhar com Engenharia de Dados na construção de pipelines de dados e em outras soluções de dados que requeiram etapas de coleta, preparação, armazenamento e processamento de dados.
+Neste projeto o objetivo é simples: Trazer insights da Fórmula 1, através de uma Stack Moderna e poderosa de dados!
 
-Conhecer as técnicas e tecnologias usadas na construção do pipeline de dados (data flow) que envolvem processos de coleta, preparação, armazenamento e acesso a dados, além da integração e combinação de diferentes fontes de dados.
+Para isso, criaremos uma pipeline de ETL completa em um projeto End-to-end de engenaria de dados, utilizaremos para isso ferramentas como Databricks, Azure Data Factory, Apache Spark e Power BI.
 
-Durante dois meses, iremos imergir no mundo da engenharia de dados, e trazer uma solução real e completa, que abrande um projeto de streaming de dados com Apache Kafka!
+Durante esse projeto aprofundaremos no conceito de Delta Lake, e utilizaremos a máxima potência dos motores do Apache Spark! Então aperte seu cinto!
 Seja muito bem vindo(a) a esta jornada!
 
-### Atividades:
+## Project Details [EN]
 
-Aulas gravadas: As aulas são gravadas, divididas em 5 módulos que totalizam 32 horas de duração.
+Formula 1 is the premier class of international motorsport, recognized by the International Automobile Federation (FIA).
 
-Aulas interativas (Live): Momento em que você irá se inspirar nos talentos das empresas mais inovadoras do mundo, podendo interagir ao longo da live e até fazer perguntas sobre carreira e tecnologia.
+In this project, the goal is simple: To bring insights from Formula 1, through a modern and powerful data stack!
 
-Desafio Final: Construção de um projeto End-to-End, utilizando o aclamado Apache Kafka.
+To achieve this, we will create a complete ETL pipeline in an end-to-end data engineering project, using tools such as Databricks, Azure Data Factory, Apache Spark, and Power BI.
+
+During this project, we will delve into the concept of Delta Lake and harness the full power of the Apache Spark engines! So buckle up!
+Welcome to this journey!
 
 
 
-### Repositório destinado à estudos e documentação do projeto de formação.
+
+### Repositório destinado à estudos e documentação do projeto de formação. 
 
 
 <div align="center">
@@ -42,5 +46,3 @@ Desafio Final: Construção de um projeto End-to-End, utilizando o aclamado Apac
       <img src="https://img.shields.io/github/issues/alexklenio/DIO-dotnet-developer"/>
   </p> 
 </div>
-
-
