@@ -34,10 +34,6 @@ mount_adls("gold")
 
 # COMMAND ----------
 
-mount_adls("demo")
-
-# COMMAND ----------
-
 dbutils.fs.ls("/mnt")
 
 # COMMAND ----------
@@ -51,10 +47,6 @@ dbutils.fs.ls("/mnt/formulaumstg/silver")
 # COMMAND ----------
 
 dbutils.fs.ls("/mnt/formulaumstg/gold")
-
-# COMMAND ----------
-
-dbutils.fs.ls("/mnt/formulaumstg/demo")
 
 # COMMAND ----------
 
