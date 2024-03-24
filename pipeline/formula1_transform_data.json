@@ -1,0 +1,196 @@
+{
+	"name": "formula1_transform_data",
+	"properties": {
+		"activities": [
+			{
+				"name": "Get Folder Details",
+				"type": "GetMetadata",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "ds_formula1_raw",
+						"type": "DatasetReference",
+						"parameters": {
+							"p_window_end_date": {
+								"value": "@pipeline().parameters.p_window_end_date",
+								"type": "Expression"
+							}
+						}
+					},
+					"fieldList": [
+						"exists"
+					],
+					"storeSettings": {
+						"type": "AzureBlobFSReadSettings",
+						"recursive": true,
+						"enablePartitionDiscovery": false
+					},
+					"formatSettings": {
+						"type": "JsonReadSettings"
+					}
+				}
+			},
+			{
+				"name": "If Folder Exists",
+				"type": "IfCondition",
+				"dependsOn": [
+					{
+						"activity": "Get Folder Details",
+						"dependencyConditions": [
+							"Completed"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"expression": {
+						"value": "@activity('Get Folder Details').output.Exists",
+						"type": "Expression"
+					},
+					"ifTrueActivities": [
+						{
+							"name": "trans race results",
+							"type": "DatabricksNotebook",
+							"dependsOn": [],
+							"policy": {
+								"timeout": "0.12:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"notebookPath": "/Users/everton.araujo.cruz@outlook.com/Formula-1-Databricks-Modern-Stack/databricks/trans/1.race_results",
+								"baseParameters": {
+									"p_data_source": {
+										"value": "@variables('v_data_source')",
+										"type": "Expression"
+									}
+								}
+							},
+							"linkedServiceName": {
+								"referenceName": "AzureDatabricks1",
+								"type": "LinkedServiceReference"
+							}
+						},
+						{
+							"name": "trans driver results",
+							"type": "DatabricksNotebook",
+							"dependsOn": [
+								{
+									"activity": "trans race results",
+									"dependencyConditions": [
+										"Completed"
+									]
+								}
+							],
+							"policy": {
+								"timeout": "0.12:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"notebookPath": "/Users/everton.araujo.cruz@outlook.com/Formula-1-Databricks-Modern-Stack/databricks/trans/2.driver_standings",
+								"baseParameters": {
+									"p_data_source": {
+										"value": "@variables('v_data_source')",
+										"type": "Expression"
+									}
+								}
+							},
+							"linkedServiceName": {
+								"referenceName": "AzureDatabricks1",
+								"type": "LinkedServiceReference"
+							}
+						},
+						{
+							"name": "trans constructors results",
+							"type": "DatabricksNotebook",
+							"dependsOn": [
+								{
+									"activity": "trans race results",
+									"dependencyConditions": [
+										"Completed"
+									]
+								}
+							],
+							"policy": {
+								"timeout": "0.12:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"notebookPath": "/Users/everton.araujo.cruz@outlook.com/Formula-1-Databricks-Modern-Stack/databricks/trans/3.constructor_standings",
+								"baseParameters": {
+									"p_data_source": {
+										"value": "@variables('v_data_source')",
+										"type": "Expression"
+									}
+								}
+							},
+							"linkedServiceName": {
+								"referenceName": "AzureDatabricks1",
+								"type": "LinkedServiceReference"
+							}
+						},
+						{
+							"name": "trans calculated results",
+							"type": "DatabricksNotebook",
+							"dependsOn": [],
+							"policy": {
+								"timeout": "0.12:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"notebookPath": "/Users/everton.araujo.cruz@outlook.com/Formula-1-Databricks-Modern-Stack/databricks/trans/4.calculated_race_results",
+								"baseParameters": {
+									"p_data_source": {
+										"value": "@variables('v_data_source')",
+										"type": "Expression"
+									}
+								}
+							},
+							"linkedServiceName": {
+								"referenceName": "AzureDatabricks1",
+								"type": "LinkedServiceReference"
+							}
+						}
+					]
+				}
+			}
+		],
+		"parameters": {
+			"p_window_end_date": {
+				"type": "string"
+			}
+		},
+		"variables": {
+			"v_data_source": {
+				"type": "String",
+				"defaultValue": "Ergast"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2024-03-24T00:57:16Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

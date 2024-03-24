@@ -1,0 +1,9 @@
+{
+	"name": "adfformulaum",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "d8081e3f-3a90-4585-8f6a-39223b0e7c36",
+		"tenantId": "82a78a41-ae87-403f-bfaa-570fa0b8e867"
+	}
+}
