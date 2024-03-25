@@ -1,5 +1,5 @@
 -- Databricks notebook source
-CREATE DATABASE IF NOT EXISTS f1_raw;
+CREATE DATABASE IF NOT EXISTS bronze;
 
 -- COMMAND ----------
 
