@@ -16,10 +16,10 @@ A Fórmula 1, é a principal categoria do automobilismo internacional, reconheci
 
 Neste projeto o objetivo é simples: Trazer insights da Fórmula 1, através de uma Stack Moderna e poderosa de dados!
 
-Para isso, criaremos uma pipeline de ETL completa em um projeto End-to-end de engenaria de dados, utilizaremos para isso ferramentas como Databricks, Azure Data Factory, Apache Spark e Power BI.
+Para isso, criaremos uma pipeline de ETL completa em um projeto End-to-end de engenharia de dados, utilizaremos para isso ferramentas como Databricks, Azure Data Factory, Apache Spark e Power BI.
 
 Durante esse projeto aprofundaremos no conceito de Delta Lake, e utilizaremos a máxima potência dos motores do Apache Spark! Então aperte seu cinto!
-Seja muito bem vindo(a) a esta jornada!
+Seja muito bem-vindo(a) a esta jornada!
 
 ### Project Details [EN]
 
